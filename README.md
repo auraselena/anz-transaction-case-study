@@ -24,6 +24,12 @@ This project is my first hands-on data analysis project, built to learn how to a
 ## Tools Used
 - Google BigQuery
 - SQL (BigQuery dialect)
+- Google Looker Studio
+
+---
+
+## Dashboard
+[View Interactive Dashboard](https://datastudio.google.com/reporting/ce4ff4cb-3c87-414f-883b-654abc15cdce)
 
 ---
 
