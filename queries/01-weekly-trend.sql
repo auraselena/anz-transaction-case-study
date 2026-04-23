@@ -5,7 +5,7 @@
 
 -- Chronological view
 SELECT
-  EXTRACT(WEEK FROM date) AS week,
+  EXTRACT(ISOWEEK FROM date) AS week,
   COUNT(*) AS total_transactions,
   SUM(amount) AS total_amount,
   SUM(amount) * 0.003 AS estimated_fee
@@ -15,7 +15,7 @@ ORDER BY week ASC
 
 -- Ranked by peak transactions
 SELECT
-  EXTRACT(WEEK FROM date) AS week,
+  EXTRACT(ISOWEEK FROM date) AS week,
   COUNT(*) AS total_transactions,
   SUM(amount) AS total_amount,
   SUM(amount) * 0.003 AS estimated_fee
@@ -25,7 +25,7 @@ ORDER BY total_transactions DESC
 
 -- Ranked by estimated fee revenue
 SELECT
-  EXTRACT(WEEK FROM date) AS week,
+  EXTRACT(ISOWEEK FROM date) AS week,
   COUNT(*) AS total_transactions,
   SUM(amount) AS total_amount,
   SUM(amount) * 0.003 AS estimated_fee
