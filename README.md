@@ -44,12 +44,13 @@ Despite debit transactions being significantly higher in volume (AUD 11,160 vs A
 ---
 
 ## File Structure
+```
 queries/
 ├── 01_weekly_trend.sql         — Weekly transaction trend & estimated fee
 ├── 02_age_group_analysis.sql   — Age group contribution to volume & fee
 ├── 03_avg_transaction.sql      — Average transaction value per customer
 └── 04_net_cashflow.sql         — Weekly net cash flow & credit/debit ratio
-
+```
 ---
 
 ## Notes
