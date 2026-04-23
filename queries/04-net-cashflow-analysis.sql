@@ -13,7 +13,7 @@ GROUP BY movement
 
 -- Weekly net cash flow (chronological)
 SELECT
-  EXTRACT(week FROM date) AS week,
+  EXTRACT(ISOWEEK FROM date) AS week,
   ROUND(SUM(CASE WHEN movement = 'credit' THEN amount ELSE 0 END), 2) AS total_credit,
   ROUND(SUM(CASE WHEN movement = 'debit' THEN amount ELSE 0 END), 2) AS total_debit,
   ROUND(
@@ -27,7 +27,7 @@ ORDER BY week ASC
 -- Weekly net cash flow with status and credit/debit ratio
 WITH weekly_cashflow AS (
   SELECT
-    EXTRACT(week FROM date) AS week,
+    EXTRACT(ISOWEEK FROM date) AS week,
     ROUND(SUM(CASE WHEN movement = 'credit' THEN amount ELSE 0 END), 2) AS total_credit,
     ROUND(SUM(CASE WHEN movement = 'debit' THEN amount ELSE 0 END), 2) AS total_debit,
     ROUND(
