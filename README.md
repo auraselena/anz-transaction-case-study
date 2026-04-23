@@ -33,6 +33,11 @@ This project is my first hands-on data analysis project, built to learn how to a
 
 ---
 
+## Dashboard Preview
+![Dashboard Preview](dashboard-preview.jpg)
+
+---
+
 ## Key Insights
 
 **1. Weekly Transaction Trend**
