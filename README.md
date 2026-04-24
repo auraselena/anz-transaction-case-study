@@ -1,15 +1,17 @@
 # ANZ Transaction Case Study
 
 ## Description
-This project is my first hands-on data analysis project, built to learn how to analyze customer transaction data using SQL and Google BigQuery. The dataset used is a synthesised transaction dataset from ANZ Bank, simulated to practice financial data analysis in the context of a trading platform (e.g., Indodax).
+This project is my first hands-on data analysis project, focused on exploring customer transaction behavior using SQL in Google BigQuery.
+
+Rather than only analyzing activity, this case study emphasizes how transaction patterns translate into **financial outcomes** — particularly fee-based revenue (simulated at a 0.3% rate, inspired by common trading platform models such as Indodax).
 
 ---
 
 ## Business Questions
-1. When did peak transactions occur per week, and what was the estimated fee revenue generated, assuming a 0.3% fee rate per transaction (based on common crypto exchange fee structures)?
-2. Which age group segment contributed the most to transaction volume and estimated fee revenue, assuming a 0.3% fee rate per transaction?
-3. What is the overall average transaction value per customer?
-4. How is the weekly cash flow pattern — are customers consistently in net inflow or net outflow, and which weeks have the healthiest cash flow ratio?
+1. When do peak transaction periods occur, and how do they impact estimated fee revenue (assuming a 0.3% transaction fee)?
+2. Which age segments drive the highest transaction volume and fee revenue?
+3. What is the average transaction value per customer, and what does it suggest about user behavior?
+4. How does weekly cash flow trend — are customers in net inflow or outflow, and which periods show the healthiest balance?
 
 ---
 
@@ -22,9 +24,9 @@ This project is my first hands-on data analysis project, built to learn how to a
 ---
 
 ## Tools Used
-- Google BigQuery
-- SQL (BigQuery dialect)
-- Google Looker Studio
+- Google BigQuery  
+- SQL (BigQuery dialect)  
+- Google Looker Studio  
 
 ---
 
@@ -40,17 +42,31 @@ This project is my first hands-on data analysis project, built to learn how to a
 
 ## Key Insights
 
-**1. Weekly Transaction Trend**
-Peak transactions occurred in week 41 of 2018 (early October), with a total transaction amount of AUD 197,109. A significant drop of ~54% was observed in week 43 (AUD 91,016), which warrants further investigation into potential external factors.
+**1. Transaction Volume vs Revenue**
+Peak transaction activity occurred in week 41 of 2018, with a total transaction amount of AUD 197,109. However, higher transaction volume did not always translate to higher revenue.
 
-**2. Age Group Analysis**
-The dataset is dominated by customers aged 18–25 (47% of total customers), contributing to the highest transaction volume and estimated fee revenue in that segment. Further analysis is needed to determine whether this reflects the actual customer composition or a dataset bias.
+In some cases, weeks with lower total transaction volume generated higher estimated fee revenue — suggesting that **transaction value, not just volume, plays a critical role in revenue generation**.
 
-**3. Average Transaction Value per Customer**
-The overall average transaction value per customer is AUD 228.87.
+---
 
-**4. Net Cash Flow Analysis**
-Despite debit transactions being significantly higher in volume (AUD 11,160 vs AUD 883), total credit amount consistently dominated every week — indicating that credit transactions are driven by high-value salary/pay deposits. As a result, customers were in a net inflow position across all observed weeks. Week 43 had the highest credit/debit ratio, while week 40 had the lowest.
+**2. Age Segment Contribution**
+Customers aged 18–25 represent 47% of the dataset and contribute the highest share of transaction volume and estimated fee revenue.
+
+This may indicate strong engagement from younger users, though further validation is needed to rule out dataset bias.
+
+---
+
+**3. Customer Transaction Behavior**
+The average transaction value per customer is AUD 228.87, providing a baseline for understanding user spending behavior.
+
+When combined with revenue insights, this metric helps explain why lower-volume periods can still generate strong financial outcomes.
+
+---
+
+**4. Cash Flow Patterns**
+Despite debit transactions occurring more frequently, total credit amounts consistently dominated across all weeks — largely driven by high-value inflows such as salary deposits.
+
+As a result, customers remained in a **net inflow position** throughout the observed period. Week 43 showed the healthiest credit-to-debit ratio, while week 40 had the lowest.
 
 ---
 
